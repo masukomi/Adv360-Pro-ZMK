@@ -19,6 +19,17 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
+
+  combos {
+        compatible = "zmk,combos";
+        combo_cmd_shift {
+            layers = <2>;
+            timeout-ms = <50>;
+            key-positions = <A>;
+            bindings = <&kp LGUI>, <&kp LSHFT>;
+        };
+  };
+
   behaviors {
     #include "macros.dtsi"
 
